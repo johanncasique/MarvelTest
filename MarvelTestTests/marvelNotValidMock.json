@@ -1,0 +1,16 @@
+{"data": {
+    "limit": 20,
+    "total": 1,
+    "count": 1,
+    "results": [
+        {
+            "id": 1010354,
+            "name": "Adam Warlock",
+            "description": "Adam Warlock is an artificially created human who was born in a cocoon at a scientific complex called The Beehive.",
+            "modified": "2013-08-07T13:49:06-0400",
+            "thumbnail": {
+                "path": "http://i.annihil.us/u/prod/marvel/i/mg/a/f0/5202887448860",
+                "extension": "jpg"
+            }
+        }]
+}}
