@@ -7,20 +7,18 @@
 
 import UIKit
 
-class AppCoordinator: Coordinator {
-    var rootViewController: UIViewController {
-        return navigationController ?? UINavigationController()
+class MainCoordinator: Coordinator {
+    
+    var children = [Coordinator]()
+    var navigationController: UINavigationController
+    
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
     }
     
-    override func start() {
-        super.start()
-        showMain()
-    }
-    
-    private func showMain() {
-        let coordinator = CharactersCoordinator()
+    func start() {
+        let coordinator = CharactersCoordinator(navigationController: navigationController)
         coordinator.start()
-        navigationController = coordinator.rootViewController
+        navigationController = coordinator.navigationController
     }
-    
 }

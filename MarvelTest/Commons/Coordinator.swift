@@ -7,26 +7,9 @@
 
 import UIKit
 
-class Coordinator {
-    public var didFinish: ((Coordinator) -> Void)?
-    public var childCoordinators: [Coordinator] = []
-    public var navigationController: UINavigationController?
+protocol Coordinator {
+    var children: [Coordinator] { get set }
+    var navigationController: UINavigationController { get set }
     
-    init() {}
-    
-    func start() { }
-    
-    func push(_ coordinator: Coordinator) {
-        coordinator.didFinish = { [weak self] coordinator in
-            self?.pop(coordinator)
-        }
-        coordinator.start()
-        childCoordinators.append(coordinator)
-    }
-    
-    func pop(_ coordinator: Coordinator) {
-        if let index = childCoordinators.firstIndex(where: {$0 === coordinator}) {
-            childCoordinators.remove(at: index)
-        }
-    }
+    func start()
 }

@@ -12,13 +12,14 @@ protocol CharactersCoordinatorDelegate: AnyObject {
 }
 
 class CharactersCoordinator: Coordinator {
+    var children = [Coordinator]()
+    var navigationController: UINavigationController
     
-    var rootViewController: UINavigationController {
-        return navigationController ?? UINavigationController()
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
     }
     
-    override func start() {
-        super.start()
+    func start() {
         loadMainView()
     }
     
@@ -29,7 +30,7 @@ class CharactersCoordinator: Coordinator {
         viewModel.coordinatorDelagate = self
         Dependencies.Container.main.register(viewModel)
         navigationController = UINavigationController(rootViewController: view)
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController.navigationBar.prefersLargeTitles = true
     }
 }
 
@@ -40,9 +41,7 @@ extension CharactersCoordinator: CharactersCoordinatorDelegate {
         let view = DetailViewController()
         Dependencies.Container.main.register(viewModel,
                                              for: DependenciesName.detail.name)
-        
-        navigationController?.present(view, animated: true)
-        
+        navigationController.present(view, animated: true)
     }
 }
 
