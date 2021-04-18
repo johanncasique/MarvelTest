@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         appCoordinator.start()
         window?.rootViewController = appCoordinator.rootViewController
         window?.makeKeyAndVisible()
+        //Test for commit
     }
 }
 
