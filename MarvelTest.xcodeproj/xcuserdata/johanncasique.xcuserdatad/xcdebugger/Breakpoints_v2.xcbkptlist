@@ -14,8 +14,8 @@
             filePath = "frameworks/MarvelData/MarvelData/Networking/NetworkResource.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
             landmarkName = "request(_:using:then:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,8 +190,8 @@
             filePath = "frameworks/MarvelData/MarvelData/Networking/NetworkResource.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "264"
+            endingLineNumber = "264"
             landmarkName = "request(_:using:then:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -350,8 +350,8 @@
             filePath = "MarvelTest/MainView/Model/CharactersUseCase.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "request(with:then:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -433,6 +433,38 @@
             startingLineNumber = "22"
             endingLineNumber = "22"
             landmarkName = "loadMock()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B26767AA-21C8-4F63-90B6-5EE12DEBDCB0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MarvelTest/MainView/Model/CharactersUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "request(with:then:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6C335F85-EF5E-4ED9-B29E-036270AAD224"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MarvelTest/MainView/Data/CharactersRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "fetch(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

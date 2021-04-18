@@ -39,6 +39,9 @@
 		8731078A2548CADE00DFE2B5 /* CharactersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873106FD2546CEB300DFE2B5 /* CharactersUseCase.swift */; };
 		8731079225496B1500DFE2B5 /* marvelNotValidMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 8731079125496B1500DFE2B5 /* marvelNotValidMock.json */; };
 		8731079325496B1500DFE2B5 /* marvelNotValidMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 8731079125496B1500DFE2B5 /* marvelNotValidMock.json */; };
+		87BADE92261E00BF00ACDE5B /* CharacterModelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BADE91261E00BF00ACDE5B /* CharacterModelDTO.swift */; };
+		87BADE98261E045800ACDE5B /* CharactersNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BADE97261E045800ACDE5B /* CharactersNetwork.swift */; };
+		87BADE9F261E0DE900ACDE5B /* CharactersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BADE9E261E0DE900ACDE5B /* CharactersRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +122,9 @@
 		87310769254890D700DFE2B5 /* CharactersModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersModelTest.swift; sourceTree = "<group>"; };
 		8731077825489A1800DFE2B5 /* marvelDataMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = marvelDataMock.json; sourceTree = "<group>"; };
 		8731079125496B1500DFE2B5 /* marvelNotValidMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = marvelNotValidMock.json; sourceTree = "<group>"; };
+		87BADE91261E00BF00ACDE5B /* CharacterModelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModelDTO.swift; sourceTree = "<group>"; };
+		87BADE97261E045800ACDE5B /* CharactersNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersNetwork.swift; sourceTree = "<group>"; };
+		87BADE9E261E0DE900ACDE5B /* CharactersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +251,7 @@
 		873106F92546CE8C00DFE2B5 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
+				87BADE8D261E009300ACDE5B /* Data */,
 				8731075C2548724D00DFE2B5 /* Coordinator */,
 				8731072F2547360500DFE2B5 /* ViewModel */,
 				873106FC2546CE9C00DFE2B5 /* Model */,
@@ -313,6 +320,24 @@
 				87310769254890D700DFE2B5 /* CharactersModelTest.swift */,
 			);
 			path = CharactersTest;
+			sourceTree = "<group>";
+		};
+		87BADE8D261E009300ACDE5B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				87BADE90261E009B00ACDE5B /* DTO */,
+				87BADE97261E045800ACDE5B /* CharactersNetwork.swift */,
+				87BADE9E261E0DE900ACDE5B /* CharactersRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		87BADE90261E009B00ACDE5B /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				87BADE91261E00BF00ACDE5B /* CharacterModelDTO.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -478,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87BADE98261E045800ACDE5B /* CharactersNetwork.swift in Sources */,
 				8731075625486ED300DFE2B5 /* DetailViewModel.swift in Sources */,
 				8731072C254733F400DFE2B5 /* CharacterTableViewCellViewModel.swift in Sources */,
 				8731061D2546278C00DFE2B5 /* Dependencies.swift in Sources */,
@@ -494,7 +520,9 @@
 				873107372547375F00DFE2B5 /* CharactersViewModelProtocol.swift in Sources */,
 				873105D4254623BF00DFE2B5 /* AppDelegate.swift in Sources */,
 				873105D6254623BF00DFE2B5 /* SceneDelegate.swift in Sources */,
+				87BADE92261E00BF00ACDE5B /* CharacterModelDTO.swift in Sources */,
 				873106182546277100DFE2B5 /* LoadingView.swift in Sources */,
+				87BADE9F261E0DE900ACDE5B /* CharactersRepository.swift in Sources */,
 				873107472548047500DFE2B5 /* PagedTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

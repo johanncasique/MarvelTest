@@ -18,6 +18,7 @@
 		873107172546DA3D00DFE2B5 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873107162546DA3D00DFE2B5 /* DateExtension.swift */; };
 		8731071B2546DB3F00DFE2B5 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8731071A2546DB3F00DFE2B5 /* DataExtension.swift */; };
 		8731074B2548186900DFE2B5 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8731074A2548186900DFE2B5 /* URLExtension.swift */; };
+		87BADEA3261E580A00ACDE5B /* ApiLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BADEA2261E580A00ACDE5B /* ApiLogger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		873107162546DA3D00DFE2B5 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		8731071A2546DB3F00DFE2B5 /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
 		8731074A2548186900DFE2B5 /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
+		87BADEA2261E580A00ACDE5B /* ApiLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiLogger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				873106ED2546CA3100DFE2B5 /* Endpoint.swift */,
 				873106F12546CA4800DFE2B5 /* BackendDatasource.swift */,
 				873107052546D0B600DFE2B5 /* DataUtils */,
+				87BADEA2261E580A00ACDE5B /* ApiLogger.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				873106EA2546C9E200DFE2B5 /* NetworkResource.swift in Sources */,
 				873107172546DA3D00DFE2B5 /* DateExtension.swift in Sources */,
 				873106F22546CA4800DFE2B5 /* BackendDatasource.swift in Sources */,
+				87BADEA3261E580A00ACDE5B /* ApiLogger.swift in Sources */,
 				873107022546D00600DFE2B5 /* StringExtension.swift in Sources */,
 				8731071B2546DB3F00DFE2B5 /* DataExtension.swift in Sources */,
 				8731074B2548186900DFE2B5 /* URLExtension.swift in Sources */,

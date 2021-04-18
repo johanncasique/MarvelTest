@@ -8,14 +8,29 @@
 import MarvelData
 
 struct CharactersUseCase: BackendDataSource {
+    let apiClient = MarvelClient(baseURL: URL(string: "https://gateway.marvel.com:443/v1/public/")!, logger: APILogger(.debug))
+    
     func request(with parameters: CharacterPagination, then handler: @escaping (Result<Characters, Error>) -> Void) {
+        
+        let repository = CharactersRepository(repository: Repository(apiClient))
+        
+        repository.fetch { result in
+            switch result {
+            case .failure(let error):
+                print(error)
+            case .success(let model):
+                print(model)
+            }
+        }
+        
         NetworkinRequest<CharactersResource>().request(.init(pagination: parameters), using: .shared) { result in
             switch result {
             case .success(let response):
-                guard let model = try? response.map(to: CharactersDomainModel.self) else {
-                    return
-                }
-                handler(.success(model.data))
+                print(response)
+//                guard let model = try? response.map(to: CharactersDomainModel.self) else {
+//                    return
+//                }
+//                handler(.success(model.data))
             case .failure: break
             }
         }
@@ -45,7 +60,7 @@ struct CharactersResource: NetworkingResource {
     }
 }
 
-struct CharacterPagination: Parameters, Pagination, Encodable  {
+struct CharacterPagination: Parameters, Encodable  {
 
     var offset: Int
     var limit: Int

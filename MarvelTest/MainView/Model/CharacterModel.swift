@@ -7,45 +7,39 @@
 
 import Foundation
 
-struct CharactersDomainModel: Decodable {
-    let data: Characters
-}
-
-struct Characters: Pagination {
-    var offset: Int
-    var limit: Int
-    var total: Int?
-    var count: Int?
-
-    let results: [Character]
-    var pagination: CharacterPagination {
-        return CharacterPagination(offset: offset,
-                                   limit: limit,
-                                   total: total,
-                                   count: count)
+struct CharactersDomainModel {
+    let pagination: PaginationDomainModel
+    let results: [CharacterDomainModel]
+    
+    internal init(offset: Int, limit: Int, total: Int? = nil, count: Int? = nil, results: [Character]) {
+        pagination = PaginationDomainModel(offset: offset, limit: limit, total: total, count: count)
+        self.results = results.map {  return CharacterDomainModel(id: $0.id,
+                                                              name: $0.name,
+                                                              description: $0.description,
+                                                              modified: $0.modified,
+                                                              thumbnail: CharacterThumbnailDomainModel(path: $0.thumbnail.path,
+                                                                                                       extension: $0.thumbnail.extension)) }
     }
 }
 
-struct Character: Decodable {
+struct CharacterDomainModel {
     let id: Int
     let name: String
     let description: String?
     let modified: String?
-    let thumbnail: CharacterThumbnail
+    let thumbnail: CharacterThumbnailDomainModel
     
     var imageURL: URL? {
         return URL(string: "\(thumbnail.path).\(thumbnail.extension)")
     }
 }
 
-struct CharacterThumbnail: Decodable {
+struct CharacterThumbnailDomainModel {
     let path: String
     let `extension`: String
 }
 
-protocol Pagination: Decodable {
-    var offset: Int { get }
-    var limit: Int { get }
-    var total: Int? { get }
-    var count: Int? { get }
+struct PaginationDomainModel {
+    var offset, limit: Int
+    var total, count: Int?
 }
